@@ -6,13 +6,13 @@
   <title>Sneha Saravanan — Business Analytics Student</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="nav-container">
       <span class="nav-logo">Sneha Saravanan</span>
       <ul class="nav-links">
@@ -27,6 +27,9 @@
   <!-- Hero Section -->
   <header class="hero" id="about">
     <div class="hero-container">
+      <div class="hero-photo">
+        <img src="images/headshot.jpg" alt="Sneha Saravanan headshot" onerror="this.style.display='none'" />
+      </div>
       <div class="hero-text">
         <h1>Sneha Saravanan</h1>
         <p class="hero-tagline">Business Analytics Student &amp; Data-Driven Problem Solver in Operations &amp; Finance</p>
@@ -39,9 +42,6 @@
           <a href="#contact" class="btn-primary">Get in Touch</a>
           <a href="#projects" class="btn-secondary">View Projects</a>
         </div>
-      </div>
-      <div class="hero-photo">
-        <img src="images/headshot.jpg" alt="Sneha Saravanan headshot" onerror="this.style.display='none'" />
       </div>
     </div>
   </header>
@@ -158,6 +158,17 @@
   <footer class="footer">
     <p>&copy; 2026 Sneha Saravanan. Graduating May 2026, University of Iowa.</p>
   </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
 
 </body>
 </html>
